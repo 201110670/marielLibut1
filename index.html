@@ -1,0 +1,60 @@
+<!DOCTYPE htm
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, target-densityDpi=device-dpi" />
+</script>
+
+<script type="text/javascript">
+window.addEventListener("devicemotion", function(event) {
+		var ax = event.accelerationIncludingGravity.x;
+		var ay = event.accelerationIncludingGravity.y;
+		
+		if(ax<=0){
+		var ans1=document.getElementById("txtn").innerHTML="KARA";
+		}else if(ax>=1){
+		document.getElementById("txtn").innerHTML="KRUS";
+		}else if(ay>=1){
+		document.getElementById("txtn").innerHTML="KRUS";
+		}else if(ay<=0){
+		document.getElementById("txtn").innerHTML="KARA";
+		}				
+
+},true);
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+<div data-role="page" data-theme="b" id="aa">
+	<div data-role="header">
+		<h1>Kara o Krus</h1>
+	</div>
+	<div data-role="content"><center>
+	<h1>What do you want? KARA o KRUS</h1>
+<h1 id="txtn"></h1><br></center data>
+		
+		
+			</div>
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+	<ul>
+	<li><a data-icon="gear" onClick="window.location.reload()" >Refresh</a></li>
+	<li><a href="#mainPage" data-icon="back" >Back</a></li>
+	</ul>		
+	</div>
+	</div>
+</div>
+</div>
+</body>
+
+</html>
